@@ -8,11 +8,13 @@ Pod::Spec.new do |s|
   s.homepage     = 'http://aws.amazon.com/mobile/sdk'
   s.license      = 'Amazon Software License'
   s.author       = { 'Amazon Web Services' => 'amazonwebservices' }
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = "10.10"
+  s.tvos.deployment_target = "10.0"
   s.source       = { :git => 'https://github.com/aws/aws-sdk-ios.git',
                      :tag => s.version}
   s.requires_arc = true
-  s.library      = 'sqlite3' 
+  s.library      = 'sqlite3'
   s.dependency 'AWSCore', '2.6.5'
   s.source_files = 'AWSCognito/*.{h,m}', 'AWSCognito/**/*.{h,m}'
   s.public_header_files = 'AWSCognito/*.h', 'AWSCognito/CognitoSync/*.h'
